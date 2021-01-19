@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+    background: black;
+	height: 100vh;
+	margin: 0;
+	padding: 4em;
+	display: grid;
+}
+
+div {
+	grid-area: 1 / 1;
+	margin: 0 auto;
+	width: 4px;
+	height: 100%;
+	background: #fff;
+}
+
+div:first-child {
+	animation: spin-1 4s infinite linear;
+}
+
+div:last-child {
+	animation: spin-2 4s infinite linear;
+}
+
+@keyframes spin-1 {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin-2 {
+	0% {
+		transform: rotate(90deg);
+	}
+
+	100% {
+		transform: rotate(450deg);
+	}
+}
+        </style>
+    </head>
+    
+    <body>
+		<div></div>
+		<div></div>
+    </body>
+</html>
